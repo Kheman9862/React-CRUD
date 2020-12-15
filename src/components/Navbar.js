@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
 
-
+//This is a navbar which contains the link to add users
     return (
         <div>
         <AppBar position="static" style={{width:"100%",marginRight:"400px"}}>

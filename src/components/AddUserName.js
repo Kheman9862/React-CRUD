@@ -6,10 +6,11 @@ import shortID from 'shortid';
 
 export default function AddUserName() {
 
-const [name, setName] = useState('');
-const { addData } = useContext(SharedContext);
-const Route = useHistory();
-    
+const [name, setName] = useState(''); //initializing the name value
+const { addData } = useContext(SharedContext); //subscribing to the context value
+const Route = useHistory(); //This is needed because once we click submit i want to see my list and i cannot click back arrow since data is temporarily stored as there is no database/local storage used.
+
+// id is generated using shortID which is a npm package
 const handleSubmit = (e) => {
     e.preventDefault();
     addData({name,id:shortID.generate()});

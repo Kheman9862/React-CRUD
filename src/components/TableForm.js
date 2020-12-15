@@ -7,6 +7,7 @@ import { SharedContext } from '../Shared/context';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
+// Styling 
 const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
@@ -26,9 +27,10 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function TableForm() {
-const classes = useStyles();
-const {users,deleteData} = useContext(SharedContext);
+const classes = useStyles(); //initializing styles
+const {users,deleteData} = useContext(SharedContext); //subscribing to the values from the context
 
+// Printing out the list of users
 const body = (
         <List className={classes.root}>
         {users.map((val)=>(
